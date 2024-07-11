@@ -41,7 +41,7 @@ WHERE activity_date BETWEEN '2019-06-28' AND '2019-07-27'
 GROUP BY activity_date HAVING COUNT(activity_type)>=1; 
 
 ---exercise 8
-select COUNT(DISTINCT id), DATE from employees
+select COUNT(id), DATE from employees
 WHERE EXTRACT(MONTH FROM joining_date) BETWEEN 01 AND 07 
 AND EXTRACT(DATE FROM joining_date) BETWEEN 01 AND 31
 AND EXTRACT(YEAR FROM joining_date)=2022
@@ -52,3 +52,4 @@ select POSITION (LOWER('a') IN first_name) from worker
 WHERE first_name='Amitah';
 
 ---exercise 10
+select substring(title,length(winery)+2,4) from winemag_p2;
